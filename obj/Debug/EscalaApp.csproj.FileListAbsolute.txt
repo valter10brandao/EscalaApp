@@ -8,3 +8,15 @@ C:\Curso\EscalaApp\obj\Debug\EscalaApp.csproj.GenerateResource.cache
 C:\Curso\EscalaApp\obj\Debug\EscalaApp.csproj.CoreCompileInputs.cache
 C:\Curso\EscalaApp\obj\Debug\EscalaApp.exe
 C:\Curso\EscalaApp\obj\Debug\EscalaApp.pdb
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.Form1.resources
+C:\Curso\EscalaApp\bin\Debug\EntityFramework.dll
+C:\Curso\EscalaApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Curso\EscalaApp\bin\Debug\System.Data.SQLite.dll
+C:\Curso\EscalaApp\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Curso\EscalaApp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Curso\EscalaApp\bin\Debug\EntityFramework.xml
+C:\Curso\EscalaApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Curso\EscalaApp\bin\Debug\System.Data.SQLite.xml
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.Cadastrar.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.Entrar.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.csproj.CopyComplete
