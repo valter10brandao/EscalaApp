@@ -1,0 +1,10 @@
+C:\Curso\EscalaApp\bin\Debug\EscalaApp.exe.config
+C:\Curso\EscalaApp\bin\Debug\EscalaApp.exe
+C:\Curso\EscalaApp\bin\Debug\EscalaApp.pdb
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.csproj.AssemblyReference.cache
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.csproj.SuggestedBindingRedirects.cache
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.Properties.Resources.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.csproj.GenerateResource.cache
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.csproj.CoreCompileInputs.cache
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.exe
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.pdb
