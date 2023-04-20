@@ -26,37 +26,7 @@ namespace EscalaApp
 
         private void button1Entrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
-            {
-                MessageBox.Show("O EMAIL não pode ser vazio!");
-                textBox1.Focus();
-                return;
-
-                if (string.IsNullOrEmpty(textBox2.Text))
-                {
-                    MessageBox.Show("A SENHA não pode ser vazia!");
-                    textBox2.Focus();
-                    return;
-                }
-            }
-            string email = textBox1.Text;
-            string senha = textBox2.Text;
-
-            string sql = "SELECT * FROM login WHERE email = '" + email + "' AND senha = '" + senha + "'";
-
-          DataTable dados =  Banco.ConsultarTabela(sql);
-
-            if (dados.Rows.Count > 0)
-            {
-                MessageBox.Show("Tudo Certo! \n\r Acesso autorizado");
-             
-            }
-            else
-            {
-                MessageBox.Show("Acesso negado");
-               
-                return;
-            }
+         
 
         }
 
@@ -68,6 +38,19 @@ namespace EscalaApp
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();  
+            login.ShowDialog(); 
+
+        }
+
+        private void button2CriarConta_Click(object sender, EventArgs e)
+        {
+            Cadastrar cadastrar = new Cadastrar();
+            cadastrar.ShowDialog(); 
         }
     }
 }

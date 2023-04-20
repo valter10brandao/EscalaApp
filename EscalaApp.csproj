@@ -72,11 +72,23 @@
     <Compile Include="Cadastrar.Designer.cs">
       <DependentUpon>Cadastrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CodigoBarras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodigoBarras.Designer.cs">
+      <DependentUpon>CodigoBarras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entrar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Entrar.Designer.cs">
       <DependentUpon>Entrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feito.Designer.cs">
+      <DependentUpon>Feito.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -84,10 +96,43 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItensMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItensMenu.Designer.cs">
+      <DependentUpon>ItensMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpacaoAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpacaoAgendamento.Designer.cs">
+      <DependentUpon>OpacaoAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recibo.Designer.cs">
+      <DependentUpon>Recibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecuperarSenha.Designer.cs">
+      <DependentUpon>RecuperarSenha.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cadastrar.resx">
       <DependentUpon>Cadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodigoBarras.resx">
+      <DependentUpon>CodigoBarras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entrar.resx">
       <DependentUpon>Entrar.cs</DependentUpon>
@@ -95,15 +140,25 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItensMenu.resx">
+      <DependentUpon>ItensMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpacaoAgendamento.resx">
+      <DependentUpon>OpacaoAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Recibo.resx">
+      <DependentUpon>Recibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecuperarSenha.resx">
+      <DependentUpon>RecuperarSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +172,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkAzul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkAzulBranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkVerdeBola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkVerdeTransparente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmojiFeliz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lixeira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QRcode.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-hand-holding-a-mobile-ai-eps.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\Salvar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
