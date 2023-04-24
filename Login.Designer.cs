@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.button4FaceBook = new System.Windows.Forms.Button();
             this.button3Google = new System.Windows.Forms.Button();
             this.button2Login = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             this.button4FaceBook.TabIndex = 36;
             this.button4FaceBook.Text = "ENTRAR COM FACEBOOK";
             this.button4FaceBook.UseVisualStyleBackColor = false;
+            this.button4FaceBook.Click += new System.EventHandler(this.button4FaceBook_Click);
             // 
             // button3Google
             // 
@@ -74,6 +76,7 @@
             this.button3Google.TabIndex = 35;
             this.button3Google.Text = "ENTRAR COM GOOGLE";
             this.button3Google.UseVisualStyleBackColor = false;
+            this.button3Google.Click += new System.EventHandler(this.button3Google_Click);
             // 
             // button2Login
             // 
@@ -190,7 +193,7 @@
             // 
             // pictureBox1
             // 
-           
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(300, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(58, 31);

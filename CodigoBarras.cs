@@ -77,7 +77,7 @@ namespace EscalaApp
 
         private void button1Impressao_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Em construção...");
         }
     }
 }

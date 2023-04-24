@@ -66,6 +66,7 @@
             this.button3Manual.TabIndex = 16;
             this.button3Manual.Text = "MANUAL";
             this.button3Manual.UseVisualStyleBackColor = false;
+            this.button3Manual.Click += new System.EventHandler(this.button3Manual_Click);
             // 
             // label2
             // 

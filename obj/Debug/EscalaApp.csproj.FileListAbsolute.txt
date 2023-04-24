@@ -26,3 +26,9 @@ C:\Curso\EscalaApp\obj\Debug\EscalaApp.ItensMenu.resources
 C:\Curso\EscalaApp\obj\Debug\EscalaApp.OpacaoAgendamento.resources
 C:\Curso\EscalaApp\obj\Debug\EscalaApp.CodigoBarras.resources
 C:\Curso\EscalaApp\obj\Debug\EscalaApp.Recibo.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.Feito.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.ContaManual1.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.ContaManual2.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.ContaManual3.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.EntraFacebook.resources
+C:\Curso\EscalaApp\obj\Debug\EscalaApp.EntrarGoogle.resources

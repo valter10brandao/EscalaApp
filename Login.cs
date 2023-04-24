@@ -98,5 +98,17 @@ namespace EscalaApp
             RecuperarSenha recuperarSenha = new RecuperarSenha();
             recuperarSenha.ShowDialog();
         }
+
+        private void button4FaceBook_Click(object sender, EventArgs e)
+        {
+            EntraFacebook entrarFacebook = new EntraFacebook();
+            entrarFacebook.ShowDialog();
+        }
+
+        private void button3Google_Click(object sender, EventArgs e)
+        {
+            EntrarGoogle entrarGoogle = new EntrarGoogle(); 
+            entrarGoogle.ShowDialog();
+        }
     }
 }

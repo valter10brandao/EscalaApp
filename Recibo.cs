@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EscalaApp
 {
@@ -112,6 +113,51 @@ namespace EscalaApp
             string nome = textBox4Email.Text;
             label13.Text = codigoBarra;
             label8.Text = frequencia;
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = "";
+            textBox2.Focus();   
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+
+            textBox3.Text = "";
+            textBox3.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+
+            txt = "----- Comprovante de pagamento ----- \n\r";
+
+            txt += "-------------------------------------------------- \n\r";
+
+            txt += "Data Vencimento: " + dataVencimento + "\n\r";
+            txt += "Valor original : R$ " + valor + "\n\r";
+            txt += "Documento: " + nomeConta + "\n\r";
+            txt += "Pagador: " + textBox4Email.Text + "\n\r";
+            txt += "Agencia: " + textBox2.Text + "\n\r";
+            txt += "Conta: " + textBox3.Text + "\n\r";
+            txt += "Frequencia: " + frequencia + "\n\r";
+            txt += "Data e hora do Recibo: " + dateTime + "\n\r";
+            txt += " -------- Codigo de autenticação ------ \n\r";
+            txt += codigoBarra;
+
+
+
+            Font letra = new Font("Arial", 12, FontStyle.Regular);
+            Brush pincel = new SolidBrush(Color.Black);
+            e.Graphics.DrawString(txt, letra, pincel, new PointF(20, 20));
+
         }
     }
 }

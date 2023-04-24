@@ -16,5 +16,17 @@ namespace EscalaApp
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ItensMenu itensMenu = new ItensMenu();  
+            itensMenu.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ItensMenu itensMenu = new ItensMenu();
+            itensMenu.ShowDialog();
+        }
     }
 }

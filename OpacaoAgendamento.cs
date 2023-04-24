@@ -28,5 +28,11 @@ namespace EscalaApp
             CodigoBarras codigoBarras = new CodigoBarras(); 
             codigoBarras.ShowDialog();
         }
+
+        private void button3Manual_Click(object sender, EventArgs e)
+        {
+            ContaManual1 contaManual1 = new ContaManual1();
+            contaManual1.ShowDialog();
+        }
     }
 }

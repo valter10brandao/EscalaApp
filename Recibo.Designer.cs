@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recibo));
             this.button1 = new System.Windows.Forms.Button();
             this.button2CodigoBarras = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9DataHora = new System.Windows.Forms.Label();
             this.textBox4Email = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,7 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxNomeConta = new System.Windows.Forms.PictureBox();
-            this.label9DataHora = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -77,6 +78,7 @@
             this.button1.TabIndex = 39;
             this.button1.Text = "IMPRIMIR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2CodigoBarras
             // 
@@ -118,6 +120,18 @@
             this.panel2.Size = new System.Drawing.Size(438, 226);
             this.panel2.TabIndex = 36;
             // 
+            // label9DataHora
+            // 
+            this.label9DataHora.AutoSize = true;
+            this.label9DataHora.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9DataHora.ForeColor = System.Drawing.Color.Indigo;
+            this.label9DataHora.Location = new System.Drawing.Point(296, 0);
+            this.label9DataHora.Name = "label9DataHora";
+            this.label9DataHora.Size = new System.Drawing.Size(92, 22);
+            this.label9DataHora.TabIndex = 29;
+            this.label9DataHora.Text = "data e hora";
+            this.label9DataHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // textBox4Email
             // 
             this.textBox4Email.Location = new System.Drawing.Point(214, 74);
@@ -155,6 +169,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(171, 20);
             this.textBox3.TabIndex = 3;
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // textBox2
             // 
@@ -162,6 +177,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(168, 20);
             this.textBox2.TabIndex = 2;
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // textBox1
             // 
@@ -299,6 +315,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(429, 375);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 26);
@@ -309,6 +326,7 @@
             // pictureBoxNomeConta
             // 
             this.pictureBoxNomeConta.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxNomeConta.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNomeConta.Image")));
             this.pictureBoxNomeConta.Location = new System.Drawing.Point(188, 374);
             this.pictureBoxNomeConta.Name = "pictureBoxNomeConta";
             this.pictureBoxNomeConta.Size = new System.Drawing.Size(34, 26);
@@ -316,17 +334,9 @@
             this.pictureBoxNomeConta.TabIndex = 38;
             this.pictureBoxNomeConta.TabStop = false;
             // 
-            // label9DataHora
+            // printDocument1
             // 
-            this.label9DataHora.AutoSize = true;
-            this.label9DataHora.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9DataHora.ForeColor = System.Drawing.Color.Indigo;
-            this.label9DataHora.Location = new System.Drawing.Point(296, 0);
-            this.label9DataHora.Name = "label9DataHora";
-            this.label9DataHora.Size = new System.Drawing.Size(92, 22);
-            this.label9DataHora.TabIndex = 29;
-            this.label9DataHora.Text = "data e hora";
-            this.label9DataHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // printDialog1
             // 

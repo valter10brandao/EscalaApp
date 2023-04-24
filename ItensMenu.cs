@@ -449,10 +449,244 @@ namespace EscalaApp
                " apagar NVARCHAR(20))";
 
             Banco.CriarTabela(sql);
-           
-        }
-    }
 
+            DateTime dataAtual = DateTime.Now;
+            DateTime dataVenc = DateTime.Now;
+            string nomeConta = "";
+            string valor = "";
+            string dataVencimento = "";
+
+            dataGridView1.Rows.Clear();
+
+
+
+            string query = "SELECT * FROM despesa ORDER BY id";
+
+            DataTable dados = Banco.ConsultarTabela(query);
+
+            foreach (DataRow linha in dados.Rows)
+            {
+                dataGridView1.Rows.Add(linha.ItemArray);
+
+            }
+            nomeConta = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            valor = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            dataVencimento = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+
+            label4NomeConta.Text = nomeConta;
+            if (nomeConta == "Cartão de Crédito")
+            {
+                pictureBox1.Image = Image.FromFile("img/cartao.png");
+            }
+            else if (nomeConta == "Luz")
+            {
+                pictureBox1.Image = Image.FromFile("img/luz.png");
+            }
+            else if (nomeConta == "Água")
+            {
+                pictureBox1.Image = Image.FromFile("img/agua.jpg");
+            }
+            else if (nomeConta == "Telefone")
+            {
+                pictureBox1.Image = Image.FromFile("img/telefone.png");
+            }
+            else if (nomeConta == "Outros")
+            {
+                pictureBox1.Image = Image.FromFile("img/outros.png");
+            }
+            else if (nomeConta == "Aluguel")
+            {
+                pictureBox1.Image = Image.FromFile("img/aluguel.png");
+            }
+
+            label7ValorDaConta.Text = valor.Replace(".", ",");
+            label2DataVencimento.Text = dataVencimento;
+
+            try
+            {
+                dataVenc = DateTime.Parse(dataVencimento);
+
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("não foi possivel corverter a data:" + dataVencimento);
+            }
+
+
+
+            // soma dos valores
+
+            string query2 = "SELECT SUM (valor) FROM despesa";
+            DataTable dados2 = Banco.ConsultarTabela(query2);
+
+            string totais = dados2.Rows[0][0].ToString();
+            label3Total.Text = totais.ToString();
+
+
+            dataVenc = DateTime.Parse(dataVencimento);
+
+            TimeSpan dia = TimeSpan.Zero;
+            dia = dataAtual.Subtract(dataVenc);
+
+            dia = dataVenc.Subtract(dataAtual);
+            int dias = (int)dia.TotalDays;
+
+
+
+
+            if (dias > 0)
+            {
+                dias = dias + 1;
+                textBox1.BackColor = Color.Green;
+                label5DiasEmAtraso.Text = "Falta " + dias + " dias para vencimento!!";
+                textBox1.Text = "A Vencer";
+                label4NomeConta.Text = nomeConta;
+                label7ValorDaConta.Text = valor.Replace(".", ",");
+                label2DataVencimento.Text = dataVencimento;
+            }
+            else if (dias < 0)
+            {
+                dias = dias + 1;
+                dias = dias * -1;
+                textBox1.BackColor = Color.Red;
+                label5DiasEmAtraso.Text = "esta conta Venceu a  " + dias + " dias";
+                textBox1.Text = "Conta Vencida";
+                label4NomeConta.Text = nomeConta;
+                label7ValorDaConta.Text = valor.Replace(".", ",");
+                label2DataVencimento.Text = dataVencimento;
+            }
+            else
+            {
+
+                textBox1.BackColor = Color.Yellow;
+                label5DiasEmAtraso.Text = "Vencimento hoje!! ";
+                textBox1.Text = "Vence hoje!!";
+                label4NomeConta.Text = nomeConta;
+                label7ValorDaConta.Text = valor.Replace(".", ",");
+                label2DataVencimento.Text = dataVencimento;
+
+            }
+
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string baseDados = Application.StartupPath + @"\DBSQlite.db";
+                string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+                SQLiteConnection conexao = new SQLiteConnection(strConection);
+
+                DateTime dataAtual = DateTime.Now;
+
+                string nomeConta = "";
+                string valor = "";
+                string dataVencimento = "";
+
+
+
+                try
+                {
+                    nomeConta = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                    valor = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                    dataVencimento = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+
+                    label4NomeConta.Text = nomeConta;
+
+
+                    if (nomeConta == "Cartão de Crédito")
+                    {
+                        pictureBox1.Image = Image.FromFile("img/cartao.png");
+                    }
+                    else if (nomeConta == "Luz")
+                    {
+                        pictureBox1.Image = Image.FromFile("img/luz.png");
+                    }
+                    else if (nomeConta == "Água")
+                    {
+                        pictureBox1.Image = Image.FromFile("img/agua.jpg");
+                    }
+                    else if (nomeConta == "Telefone")
+                    {
+                        pictureBox1.Image = Image.FromFile("img/telefone.png");
+                    }
+                    else if (nomeConta == "Outros")
+                    {
+                        pictureBox1.Image = Image.FromFile("img/outros.png");
+                    }
+                    else if (nomeConta == "Aluguel")
+                    {
+                        pictureBox1.Image = Image.FromFile("img/aluguel.png");
+                    }
+
+                    label7ValorDaConta.Text = valor.Replace(".", ",");
+                    label2DataVencimento.Text = dataVencimento;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                { conexao.Close(); }
+
+
+                DateTime dataVenc = DateTime.Parse(dataVencimento);
+
+                TimeSpan dia = TimeSpan.Zero;
+                dia = dataAtual.Subtract(dataVenc);
+
+                dia = dataVenc.Subtract(dataAtual);
+                int dias = (int)dia.TotalDays;
+
+
+
+
+
+
+                if (dias > 0)
+                {
+
+
+                    dias = dias + 1;
+                    textBox1.BackColor = Color.Green;
+                    label5DiasEmAtraso.Text = "Falta " + dias + " dias para vencimento!!";
+                    textBox1.Text = "A Vencer";
+                    label4NomeConta.Text = nomeConta;
+                    label7ValorDaConta.Text = valor.Replace(".", ",");
+                    label2DataVencimento.Text = dataVencimento;
+                }
+                else if (dias < 0)
+                {
+
+                    dias = dias + 1;
+                    dias = dias * -1;
+                    textBox1.BackColor = Color.Red;
+                    label5DiasEmAtraso.Text = "esta conta Venceu a  " + dias + " dias";
+                    textBox1.Text = "Conta Vencida";
+                    label4NomeConta.Text = nomeConta;
+                    label7ValorDaConta.Text = valor.Replace(".", ",");
+                    label2DataVencimento.Text = dataVencimento;
+                }
+                else
+                {
+
+                    textBox1.BackColor = Color.Yellow;
+                    label5DiasEmAtraso.Text = "Vencimento hoje!! ";
+                    textBox1.Text = "Vence hoje!!";
+                    label4NomeConta.Text = nomeConta;
+                    label7ValorDaConta.Text = valor.Replace(".", ",");
+                    label2DataVencimento.Text = dataVencimento;
+
+                }
+
+
+            }
+        }
+
+    }
 }
 
 

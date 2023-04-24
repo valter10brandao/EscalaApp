@@ -78,11 +78,41 @@
     <Compile Include="CodigoBarras.Designer.cs">
       <DependentUpon>CodigoBarras.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContaManual1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContaManual1.Designer.cs">
+      <DependentUpon>ContaManual1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContaManual2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContaManual2.Designer.cs">
+      <DependentUpon>ContaManual2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContaManual3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContaManual3.Designer.cs">
+      <DependentUpon>ContaManual3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntraFacebook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntraFacebook.Designer.cs">
+      <DependentUpon>EntraFacebook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entrar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Entrar.Designer.cs">
       <DependentUpon>Entrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntrarGoogle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntrarGoogle.Designer.cs">
+      <DependentUpon>EntrarGoogle.cs</DependentUpon>
     </Compile>
     <Compile Include="Feito.cs">
       <SubType>Form</SubType>
@@ -134,8 +164,26 @@
     <EmbeddedResource Include="CodigoBarras.resx">
       <DependentUpon>CodigoBarras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ContaManual1.resx">
+      <DependentUpon>ContaManual1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContaManual2.resx">
+      <DependentUpon>ContaManual2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContaManual3.resx">
+      <DependentUpon>ContaManual3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntraFacebook.resx">
+      <DependentUpon>EntraFacebook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entrar.resx">
       <DependentUpon>Entrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntrarGoogle.resx">
+      <DependentUpon>EntrarGoogle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feito.resx">
+      <DependentUpon>Feito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
